@@ -17,18 +17,18 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   POT_read = analogRead(pot);
-  // LED_ =map(POT_read,0,1023,0,255);
-  if(POT_read >= 0 && POT_read <= 341){
+  LED_ =map(POT_read,0,1023,0,255);
+  if(POT_read >= 0 && POT_read <= 85){
     analogWrite(LED1,POT_read);
     digitalWrite(LED2,LOW);
     digitalWrite(LED3,LOW);
   }
-  else if(POT_read >= 342 && POT_read <= 683){
+  else if(POT_read >= 86 && POT_read <= 171){
     analogWrite(LED2,POT_read);
     digitalWrite(LED1,LOW);
     digitalWrite(LED3,LOW);
   }
-  else if(POT_read >= 684 && POT_read <= 1023){
+  else if(POT_read >= 172 && POT_read <= 255){
     analogWrite(LED3,POT_read);
     digitalWrite(LED2,LOW);
     digitalWrite(LED1,LOW);
